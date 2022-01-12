@@ -11,3 +11,7 @@ function displayDay(){
 }
 
 displayDay();
+
+// need eventlistener once save button pressed
+// save txt on local to not loose info when refreshing oage
+// 
