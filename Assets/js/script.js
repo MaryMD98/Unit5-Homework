@@ -5,18 +5,39 @@ var currentDayEl = $('#currentDay');
 // day display on the header id="currentDay" class="lead"
 function displayDay(){
     var today = moment().format('dddd, MMMM Do');
+    
     currentDayEl.text(today);
+    checNewDay();
+    localStorage.setItem("today", today);
 }
 
 displayDay();
 
+function checNewDay(){
+    var localToday = localStorage.getItem("today");
+    var todayDay = moment().format('dddd, MMMM Do');
+
+    if(localToday != todayDay){
+        // clear local its a new day
+        var newMSG = "";
+        localStorage.setItem("hour9am", newMSG); 
+        localStorage.setItem("hour10am", newMSG);
+        localStorage.setItem("hour11am", newMSG);
+        localStorage.setItem("hour12pm", newMSG);
+        localStorage.setItem("hour1pm", newMSG);
+        localStorage.setItem("hour2pm", newMSG);
+        localStorage.setItem("hour3pm", newMSG);
+        localStorage.setItem("hour4pm", newMSG);
+        localStorage.setItem("hour5pm", newMSG);
+    }
+}
 // add hour check of the day, and if current time and change the colors on text area
 //  past is gray, present is red, future is green
 
 var format = 'hh:mm:ss';
 
 function addColortoDisplay (){
-    var time = moment('01:34:00',format);
+    var time = moment('12:34:00',format);
 
     var beforeTime = moment('9:00:00', format);
     var afterTime = moment('9:59:59', format);
