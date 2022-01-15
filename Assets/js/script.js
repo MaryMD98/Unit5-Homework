@@ -13,6 +13,7 @@ function displayDay(){
 
 displayDay();
 
+// check if page is loaded in a new day, and clear locals if true
 function checNewDay(){
     var localToday = localStorage.getItem("today");
     var todayDay = moment().format('dddd, MMMM Do');
@@ -37,7 +38,7 @@ function checNewDay(){
 var format = 'hh:mm:ss';
 
 function addColortoDisplay (){
-    var time = moment('12:34:00',format);
+    var time = moment();
 
     var beforeTime = moment('9:00:00', format);
     var afterTime = moment('9:59:59', format);
