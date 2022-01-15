@@ -1,23 +1,23 @@
-# Homework unit Four:
-# Coding Quiz Challenge
+# Homework Unit Five:
+# Work Day Scheduler
 
 ## Description of the homework:
 
-In this homework, I created a coding Quiz using homeworks and miniprojects from the Bootcamp activities that I have done so far. 
+In this homework, I created a work day scheduler that allows the user to save events for each hour of the day. 
 
-The page displays a start button to begin the quiz. Once the start button is pressed, the first question is displayed and a timer starts, if the timer gets to 0 the quiz is done. This quiz contains 5 questions with 4 multpiple choice answers. 
-After responding each question, a new question is dsplayed. Once all questions are answered, a new screen loads to display the total score and a textbox to enter the users Initial. when submited. a new page display to show the highest score.
-This page has two buttoms, one to start the game and the other to reset the scores and start the gme again. 
+The page displays a planner with timeblocks for standard business hours. Each timeblock is color coded to indicate whether the event in the planner is in the past, in the preset, or in the future. Each timeblock has a save button. When a message is inputted in the timeblock and the user has pressed saved, the message will be saved on the local storage to load anytime the user refreshes the page. When a new day starts, the planner resets to start a new day.
 
-### Link to application [HERE](https://marymd98.github.io/Unit4-Homework/)
+In this homework, I used, jQuery, moment, bootstrap, and javascript to create the planner. 
 
-## Screenshot  of Coding Quiz Challenge:
-Below are screenshots of the Quiz Challenge 
+### Link to application [HERE](https://marymd98.github.io/Unit5-Homework/)
 
-![image one of quiz screenshot](./Assets/pictures/quiz1.png)
-![image two of quiz screenshot](./Assets/pictures/quiz2.png)
-![image three of quiz screenshot](./Assets/pictures/quiz3.png)
-![image four of quiz screenshot](./Assets/pictures/quiz4.png)
+## Screenshot  of Work Day Scheduler:
+Below are screenshots of the Work Day Scheduler. 
+
+![image one of scheduler screenshot](./Assets/pictures/Screenshot1.png)
+![image two of scheduler screenshot](./Assets/pictures/Screenshot2.png)
+![image three of scheduler screenshot](./Assets/pictures/Screenshot3.png)
+
 
 
 
