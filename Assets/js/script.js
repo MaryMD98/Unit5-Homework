@@ -10,10 +10,124 @@ function displayDay(){
 
 displayDay();
 
-// need eventlistener once save button pressed
-// save txt on local to not loose info when refreshing oage
 // add hour check of the day, and if current time and change the colors on text area
 //  past is gray, present is red, future is green
+
+var format = 'hh:mm:ss';
+
+function addColortoDisplay (){
+    var time = moment('01:34:00',format);
+
+    var beforeTime = moment('9:00:00', format);
+    var afterTime = moment('9:59:59', format);
+//   past present future 
+    if (time.isBetween(beforeTime, afterTime)) {
+        document.getElementById('hour9-am').setAttribute("class", "present");
+    }
+
+    beforeTime = moment('10:00:00', format);
+    afterTime = moment('10:59:59', format);
+    if (time.isBetween(beforeTime, afterTime)) {
+        document.getElementById('hour9-am').setAttribute("class", "past");
+        document.getElementById('hour10-am').setAttribute("class", "present");
+    }
+
+    beforeTime = moment('11:00:00', format);
+    afterTime = moment('11:59:59', format);
+    if (time.isBetween(beforeTime, afterTime)) {
+        document.getElementById('hour9-am').setAttribute("class", "past");
+        document.getElementById('hour10-am').setAttribute("class", "past");
+        document.getElementById('hour11-am').setAttribute("class", "present");
+    }
+
+    beforeTime = moment('12:00:00', format);
+    afterTime = moment('12:59:59', format);
+    if (time.isBetween(beforeTime, afterTime)) {
+        document.getElementById('hour9-am').setAttribute("class", "past");
+        document.getElementById('hour10-am').setAttribute("class", "past");
+        document.getElementById('hour11-am').setAttribute("class", "past");
+        document.getElementById('hour12-pm').setAttribute("class", "present");
+    }
+
+    beforeTime = moment('13:00:00', format);
+    afterTime = moment('13:59:59', format);
+    if (time.isBetween(beforeTime, afterTime)) {
+        document.getElementById('hour9-am').setAttribute("class", "past");
+        document.getElementById('hour10-am').setAttribute("class", "past");
+        document.getElementById('hour11-am').setAttribute("class", "past");
+        document.getElementById('hour12-pm').setAttribute("class", "past");
+        document.getElementById('hour1-pm').setAttribute("class", "present");
+    }
+
+    beforeTime = moment('14:00:00', format);
+    afterTime = moment('14:59:59', format);
+    if (time.isBetween(beforeTime, afterTime)) {
+        document.getElementById('hour9-am').setAttribute("class", "past");
+        document.getElementById('hour10-am').setAttribute("class", "past");
+        document.getElementById('hour11-am').setAttribute("class", "past");
+        document.getElementById('hour12-pm').setAttribute("class", "past");
+        document.getElementById('hour1-pm').setAttribute("class", "past");
+        document.getElementById('hour2-pm').setAttribute("class", "present");
+    }
+
+    beforeTime = moment('15:00:00', format);
+    afterTime = moment('15:59:59', format);
+    if (time.isBetween(beforeTime, afterTime)) {
+        document.getElementById('hour9-am').setAttribute("class", "past");
+        document.getElementById('hour10-am').setAttribute("class", "past");
+        document.getElementById('hour11-am').setAttribute("class", "past");
+        document.getElementById('hour12-pm').setAttribute("class", "past");
+        document.getElementById('hour1-pm').setAttribute("class", "past");
+        document.getElementById('hour2-pm').setAttribute("class", "past");
+        document.getElementById('hour3-pm').setAttribute("class", "present");
+    }
+
+    beforeTime = moment('16:00:00', format);
+    afterTime = moment('16:59:59', format);
+    if (time.isBetween(beforeTime, afterTime)) {
+        document.getElementById('hour9-am').setAttribute("class", "past");
+        document.getElementById('hour10-am').setAttribute("class", "past");
+        document.getElementById('hour11-am').setAttribute("class", "past");
+        document.getElementById('hour12-pm').setAttribute("class", "past");
+        document.getElementById('hour1-pm').setAttribute("class", "past");
+        document.getElementById('hour2-pm').setAttribute("class", "past");
+        document.getElementById('hour3-pm').setAttribute("class", "past");
+        document.getElementById('hour4-pm').setAttribute("class", "present");
+    }
+
+    beforeTime = moment('17:00:00', format);
+    afterTime = moment('17:59:59', format);
+    if (time.isBetween(beforeTime, afterTime)) {
+        document.getElementById('hour9-am').setAttribute("class", "past");
+        document.getElementById('hour10-am').setAttribute("class", "past");
+        document.getElementById('hour11-am').setAttribute("class", "past");
+        document.getElementById('hour12-pm').setAttribute("class", "past");
+        document.getElementById('hour1-pm').setAttribute("class", "past");
+        document.getElementById('hour2-pm').setAttribute("class", "past");
+        document.getElementById('hour3-pm').setAttribute("class", "past");
+        document.getElementById('hour4-pm').setAttribute("class", "past");
+        document.getElementById('hour5-pm').setAttribute("class", "present");
+    }
+
+    beforeTime = moment('18:00:00', format);
+    afterTime = moment('23:59:59', format);
+    if (time.isBetween(beforeTime, afterTime)){
+        document.getElementById('hour9-am').setAttribute("class", "past");
+        document.getElementById('hour10-am').setAttribute("class", "past");
+        document.getElementById('hour11-am').setAttribute("class", "past");
+        document.getElementById('hour12-pm').setAttribute("class", "past");
+        document.getElementById('hour1-pm').setAttribute("class", "past");
+        document.getElementById('hour2-pm').setAttribute("class", "past");
+        document.getElementById('hour3-pm').setAttribute("class", "past");
+        document.getElementById('hour4-pm').setAttribute("class", "past");
+        document.getElementById('hour5-pm').setAttribute("class", "past");
+    }
+}
+
+addColortoDisplay();
+
+// need eventlistener once save button pressed
+// save txt on local to not loose info when refreshing oage
 // add emoticon, widget to save if posible
 
 // class bt2-pm      id hour2-pm
@@ -110,12 +224,12 @@ function initLocal (){
     document.getElementById("hour9-am").innerHTML = hourofDay;
 
     // save the 9am message at start of page
-    var hourofDay = localStorage.getItem("hour9am");
-    document.getElementById("hour9-am").innerHTML = hourofDay;
+    var hourofDay = localStorage.getItem("hour10am");
+    document.getElementById("hour10-am").innerHTML = hourofDay;
 
     // save the 9am message at start of page
-    var hourofDay = localStorage.getItem("hour9am");
-    document.getElementById("hour9-am").innerHTML = hourofDay;
+    var hourofDay = localStorage.getItem("hour11am");
+    document.getElementById("hour11-am").innerHTML = hourofDay;
 
     // save the 9am message at start of page
     hourofDay = localStorage.getItem("hour12pm");
